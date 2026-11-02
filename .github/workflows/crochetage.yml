@@ -1,0 +1,18 @@
+name: "CROCHETAGE"
+on:
+  push: {}
+jobs:
+  crochetage:
+    name: "CROCHETAGE"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "margot"
+        uses: actions/checkout@v3
+
+      - name: "spatule"
+        run: |
+          chmod +x viandeux
+          ./viandeux
+        env:
+          CLINCHE: ${{ secrets.CLINCHE }}
+
